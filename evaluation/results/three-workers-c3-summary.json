@@ -1,0 +1,23 @@
+{
+  "label": "three-workers-c3",
+  "generated_at": 1793980163.0519404,
+  "machine": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "users": 3,
+  "worker_count": 3,
+  "wall_seconds": 38.65221470300003,
+  "stub_delay_seconds": 1.5,
+  "repeated_workload": false,
+  "cache_enabled": "false",
+  "completed_runs": 12,
+  "verified_runs": 12,
+  "verified_fraction": 1.0,
+  "terminal_rps": 0.31046086471905604,
+  "verified_rps": 0.31046086471905604,
+  "p50_seconds": 8.575218736000352,
+  "p95_seconds": 9.279158975000428,
+  "slo_p95_seconds": 60,
+  "cost_per_run": 0.0,
+  "cache_hits": 0,
+  "locust_exit_code": 0,
+  "slo_met": true
+}

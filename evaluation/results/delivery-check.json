@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-06",
+  "mode": "synthetic-demo",
+  "image_only_startup_with_fresh_redis_and_chroma_volumes": "passed",
+  "temporary_project": "electricity-triage-cleancheck (removed after verification)",
+  "unit_tests": {"passed": 35, "failed": 0, "runtime": "Linux application container"},
+  "smoke_checks": 9,
+  "javascript_syntax": "passed node --check web/app.js",
+  "lint": "passed ruff",
+  "public_rate_limit_per_minute": 12,
+  "next_request_status": 429,
+  "api_readiness_status": 200,
+  "prometheus_targets_up": ["api", "containers", "grafana", "jaeger", "llm-stub", "prometheus", "redis", "verifier", "workers"],
+  "browser_visual_qa": "not verified: desktop browser automation timed out",
+  "real_provider_evaluation": "not run: provider credentials not supplied",
+  "official_corpus_status": "pending review of current supply amendments and faculty reference confirmation",
+  "git_commit_or_push_performed": false
+}

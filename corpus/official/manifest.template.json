@@ -1,0 +1,11 @@
+{
+  "state": "Karnataka",
+  "status": "pending-review",
+  "version": "REPLACE_WITH_REVIEWED_VERSION",
+  "reviewed_by": "",
+  "reviewed_on": "",
+  "documents": [
+    {"id": "KERC-TARIFF", "title": "REPLACE official tariff title", "path": "data/raw/tariff.pdf", "source_url": "", "version": "", "sha256": "", "effective_from": "2026-04-01", "effective_to": "2027-03-31", "kind": "tariff"},
+    {"id": "KERC-SUPPLY", "title": "REPLACE official supply conditions plus applicable amendments", "path": "data/raw/supply.pdf", "source_url": "", "version": "", "sha256": "", "effective_from": "2026-04-01", "effective_to": "2027-03-31", "kind": "supply"}
+  ]
+}

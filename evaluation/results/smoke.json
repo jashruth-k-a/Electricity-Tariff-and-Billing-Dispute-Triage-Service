@@ -1,0 +1,44 @@
+[
+  {
+    "check": "tailoring",
+    "run_id": "6a312cfe-ba89-42de-a16a-1fbc9859445a",
+    "passed": true
+  },
+  {
+    "check": "audit",
+    "passed": true
+  },
+  {
+    "check": "range",
+    "passed": true,
+    "quarantine_id": "ac0902d4-9d33-488b-af41-9621418adc21"
+  },
+  {
+    "check": "cross-field",
+    "passed": true,
+    "quarantine_id": "37cda34b-96c9-4f32-9ba1-27fd32bee81a"
+  },
+  {
+    "check": "injection",
+    "passed": true,
+    "quarantine_id": "1df30a9f-a193-4cbf-ba5b-f36095a78a73"
+  },
+  {
+    "check": "toxicity",
+    "passed": true,
+    "quarantine_id": "c5d09013-a1a5-4611-835c-edd2ffb4f52f"
+  },
+  {
+    "check": "out-of-corpus",
+    "passed": true,
+    "run_id": "0e88955f-667d-4734-809c-7d7a26315bd6"
+  },
+  {
+    "check": "idempotency",
+    "passed": true
+  },
+  {
+    "check": "feedback",
+    "passed": true
+  }
+]

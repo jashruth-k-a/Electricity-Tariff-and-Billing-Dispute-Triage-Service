@@ -1,0 +1,88 @@
+{
+  "unsupported_answer_caught_and_researched": {
+    "run_id": "b16e4846-721a-4323-be99-249bb7dab3a1",
+    "status": "escalated",
+    "elapsed_seconds": 9.36300778388977,
+    "verified": false,
+    "event_kinds": [
+      "submitted",
+      "run_started",
+      "model_response",
+      "decision",
+      "tool_call",
+      "model_response",
+      "decision",
+      "tool_call",
+      "model_response",
+      "decision",
+      "tool_call",
+      "model_response",
+      "decision",
+      "verification",
+      "handoff_result",
+      "model_response",
+      "decision",
+      "tool_call",
+      "model_response",
+      "decision",
+      "verification",
+      "handoff_result",
+      "agent_summary",
+      "run_finished"
+    ]
+  },
+  "provider_outage_opens_circuit": {
+    "run_id": "2d179003-6743-485e-9732-723433e54bd8",
+    "status": "failed",
+    "elapsed_seconds": 0.8985705375671387,
+    "verified": false,
+    "event_kinds": [
+      "submitted",
+      "run_started",
+      "model_failure",
+      "model_failure",
+      "model_failure",
+      "circuit_opened",
+      "run_failure",
+      "run_finished"
+    ]
+  },
+  "open_circuit_degrades_without_provider_call": {
+    "run_id": "e8d6bd3d-f10e-41fb-ada5-632ea5a22c4e",
+    "status": "failed",
+    "elapsed_seconds": 0.041567325592041016,
+    "verified": false,
+    "event_kinds": [
+      "submitted",
+      "run_started",
+      "run_failure",
+      "run_finished"
+    ]
+  },
+  "half_open_probe_recovers": {
+    "run_id": "079b5b7e-9664-4877-9d65-45313858cf41",
+    "status": "completed",
+    "elapsed_seconds": 7.846674203872681,
+    "verified": true,
+    "event_kinds": [
+      "submitted",
+      "run_started",
+      "model_response",
+      "decision",
+      "tool_call",
+      "model_response",
+      "decision",
+      "tool_call",
+      "model_response",
+      "decision",
+      "tool_call",
+      "model_response",
+      "decision",
+      "model_response",
+      "verification",
+      "handoff_result",
+      "agent_summary",
+      "run_finished"
+    ]
+  }
+}

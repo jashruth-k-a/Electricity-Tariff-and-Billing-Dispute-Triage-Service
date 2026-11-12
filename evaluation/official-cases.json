@@ -1,0 +1,578 @@
+[
+  {
+    "id": "residential-correct",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "My connection serves only my residential dwelling and household appliances. Is domestic classification appropriate?"
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-1"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "residential-misclassified",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "commercial",
+      "premises_use": "residential",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "The premises has always been exclusively my residential dwelling, with no business activity or change of use. It was recorded as commercial in error. Please recommend the applicable category for officer review."
+    },
+    "expected": {
+      "route": "revision-recommended",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-1"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "tailoring-reference",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "tailoring",
+      "description": "I have a domestic connection. I run a small tailoring shop from one room of the house which I occupy as my residence. Which tariff category should I be billed under?"
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-1",
+        "42.02(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "tailoring-independent-shop",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "industrial",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "tailoring shop",
+      "description": "This is a standalone tailoring shop used exclusively for tailoring, not an occupant's residence. It has been billed as domestic. Please recommend the applicable tariff position."
+    },
+    "expected": {
+      "route": "revision-recommended",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-5"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "beauty-parlour-at-home",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "beauty parlour",
+      "description": "I occupy this house as my residence and use one portion as my beauty parlour. My connection is domestic. Please check the residential applicability exception and any modifying provision."
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-1",
+        "42.02(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "beauty-parlour-independent",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "commercial",
+      "premises_use": "commercial",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "The entire independent premises is a beauty parlour, with no residential use. Is commercial classification appropriate?"
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-3(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "legal-consultancy-at-home",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "legal consultancy",
+      "description": "I live in this house and use one portion for my legal consultancy practice. It is not a separate office premises. Is the domestic category applicable to this listed home activity?"
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-1",
+        "42.02(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "medical-consultancy-at-home",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "medical consultancy",
+      "description": "I occupy the house as my home and use one portion for medical consultancy. There is no independent clinic establishment. Please review my domestic classification against the listed residential activities."
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-1",
+        "42.02(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "private-clinic-independent",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "commercial",
+      "premises_use": "commercial",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "This independent premises is exclusively a private clinic and diagnostic centre, with no dwelling. Please check its commercial classification."
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-3(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "job-typing-at-home",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "job typing",
+      "description": "I live in my residential house and use a portion for job typing. Please check the domestic applicability and any modifying provision."
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-1",
+        "42.02(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "paying-guests-shared-home",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "paying guests",
+      "description": "I occupy the house as my residence and host paying guests in a portion of the same house. It is not independent exclusive paying-guest accommodation. Please check domestic classification."
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-1",
+        "42.02(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "paying-guests-exclusive-premises",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "commercial",
+      "premises_use": "commercial",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "The independent exclusive premises is entirely paying-guest accommodation and is not occupied as the operator's home. Please check commercial applicability."
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-3(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "bakery-manufacturing",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "industrial",
+      "premises_use": "industrial",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "The independent premises is a bakery-product manufacturing unit, not a retail bakery shop or residence. Is industrial classification supported?"
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-5"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "bakery-retail",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "commercial",
+      "premises_use": "commercial",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "This premises is exclusively a retail bakery shop. No manufacturing occurs here and there is no residential use. Please check commercial applicability."
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-3(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "load-discrepancy",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "connected_load_kw": 7,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "The utility alleges that connected load exceeds the sanctioned five kilowatts. I dispute the measured connected load and no physical inspection report is available. Can tariff text alone establish the physical load?"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / General-17"
+      ],
+      "issue_type": "load-violation"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "meter-accuracy",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "I dispute the meter's accuracy because it seems to run fast. There is no meter test result. Please recommend the investigation route rather than assuming the meter is faulty."
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "6(11)(vii)-(xi)"
+      ],
+      "issue_type": "meter-accuracy"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "unsettled-mixed-workshop",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "automobile repair workshop",
+      "description": "I live in one part of the premises and operate an automobile repair workshop in another part on the same connection. The separate business load and metering arrangements are unknown. Please investigate rather than assume this is a listed domestic exception."
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "Annexure-9 / LT-1",
+        "42.02(a)"
+      ],
+      "issue_type": "tariff-category"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "unknown-premises-facts",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "unknown",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "I cannot establish what the premises is currently used for, and no inspection or occupation record is available. Please refer the tariff question for investigation."
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": false,
+      "clauses": []
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "outside-state",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Kerala",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "My exclusively residential dwelling has a domestic connection. Please check the category under this state's rules."
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": false,
+      "clauses": []
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "outside-ht",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "HT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "Please investigate the category of this high-tension connection serving my premises."
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": false,
+      "clauses": []
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "outside-agriculture",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "agricultural",
+      "premises_use": "agricultural",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "This connection is for an agricultural irrigation pump. Please investigate the agricultural tariff."
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": false,
+      "clauses": []
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "outside-reviewed-period",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2018-01-01",
+      "description": "Please determine the category for this historical residential bill from January 2018."
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": false,
+      "clauses": []
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "arrears-documentary-dispute",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "I dispute arrears on my domestic account. The payment ledger and previous bills have not been reconciled. Please route this as an arrears complaint for officer review, without deciding the amount or liability from tariff text alone."
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "7 / complaints-handling"
+      ],
+      "issue_type": "arrears"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  },
+  {
+    "id": "disconnection-documentary-dispute",
+    "reference_kind": "official-primary-source-technical-reference",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "description": "I dispute disconnection of my domestic connection. The notice, account ledger and service records are unavailable. Please route the disconnection grievance for officer review without declaring the disconnection lawful or unlawful."
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "10 / grievance-redressal"
+      ],
+      "issue_type": "disconnection"
+    },
+    "reference_note": "Supporting passages are exact source-validated annotations in corpus/official/annotations. Faculty confirmation remains a presentation-stage deliverable."
+  }
+]

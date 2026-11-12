@@ -1,0 +1,50 @@
+{
+  "case_id": "tailoring-reference",
+  "run_id": "711f8532-60e8-44a6-aa3e-ba602e55769e",
+  "passed": true,
+  "elapsed_seconds": 42.383835315704346,
+  "result": {
+    "route": "bill-stands-with-reason",
+    "tariff_position": "Tailoring conducted within a residential house is explicitly included under the domestic tariff category (LT-1) in Karnataka. The domestic tariff remains applicable as the activity is a permitted use within the occupant's residence, provided it does not constitute a misuse of electricity for a higher-charged purpose.",
+    "claims": [
+      {
+        "statement": "Tailoring conducted within a residential house is explicitly included under the domestic tariff category (LT-1) in Karnataka.",
+        "chunk_ids": [
+          "KERC-TARIFF-2025-017f2c597bb66928f4eb"
+        ]
+      },
+      {
+        "statement": "The domestic tariff remains applicable as the activity is a permitted use within the occupant's residence, provided it does not constitute a misuse of electricity for a higher-charged purpose.",
+        "chunk_ids": [
+          "KERC-TARIFF-2025-017f2c597bb66928f4eb",
+          "KERC-COS-CURRENT-CLAUSES-5d515e8b8aadcdb8920d"
+        ]
+      }
+    ],
+    "citations": [
+      {
+        "chunk_id": "KERC-TARIFF-2025-017f2c597bb66928f4eb",
+        "quote": "Applicable to lighting/combined lighting, heating and motive Power installations of residential houses, including the installations serviced under erstwhile Bhagyajyothi / Kutirjyothi scheme and also to such houses where a portion is used by the occupant for (a) Handloom weaving (b) Silk rearing and reeling and artisans using motors up to 200 watts (c) Consultancy in - (i) Engineering (ii) Architecture (iii ) Medicine (iv) Astrology (v) Legal matters (vi) Income Tax (vii) Chartered Accountants (d) Job typing (e) Tailoring (f) Post Office (g) Gold smithy (h) Chawki rearing (i) Paying guests/Home stay guests (j) personal Computers (k) Dhobis (l) Hand operated printing press (m) Beauty Parlours (n) Water Supply installations, Lift which is independently serviced for bonafide use of residential complexes/residence, (o) Farm Houses and yard lighting limiting to 120 Watts, (p) Fodder Choppers, Arecanut cutting machine & Milking Machines with a connected load upto 1 HP.",
+        "document": "KERC-TARIFF-2025",
+        "clause": "Annexure-9 / LT-1",
+        "page": 550,
+        "source_url": "https://kerc.karnataka.gov.in/uploads/96731743148968.pdf"
+      },
+      {
+        "chunk_id": "KERC-COS-CURRENT-CLAUSES-5d515e8b8aadcdb8920d",
+        "quote": "42.02 MISUSE OF ELECTRICITY (Applicable to both HT and LT. Installations) Amended version vide Notification No. K.E.R.C./COS/D/07/10 Dated: 1. 7. 2010 published in Karnataka Gazette dated: 22. 7. 2010 (a) If at any time, the energy supplied under one method of charging is misused for purpose for which a higher method of charging is in force, the Assessing officer shall assess the quantum of energy and difference in fixed charges for the entire period during which such unauthorized use of electricity has taken place and if, however, the period during which such unauthorized use of electricity has taken place can not be ascertained, such perio d shall be limited to a period of 12 months immediately preceding the date of inspection and charge at two times the Tariff applicable to the purpose for which the energy is misused. The Consumer shall pay such amount within thirty days from the date of c laim, failing which, the installation is liable for disconnection and such amount shall be deemed to be arrears of electricity charges",
+        "document": "KERC-COS-CURRENT-CLAUSES",
+        "clause": "42.02(a)",
+        "page": 79,
+        "source_url": "https://kerc.karnataka.gov.in/storage/pdf-files/Regulations/ConditionsofSupplyofElectricitywithIandIIAmendments.pdf"
+      }
+    ],
+    "escalation_required": false,
+    "escalation_reason": "",
+    "issue_type": "tariff-category",
+    "verified": true,
+    "advisory_only": true
+  },
+  "model_calls": 3,
+  "corpus_version": "kerc-lt-reviewed-2026-11-06-v2"
+}

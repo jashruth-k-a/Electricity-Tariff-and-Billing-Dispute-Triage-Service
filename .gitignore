@@ -1,1 +1,16 @@
 Project Manual.pdf
+.env
+.env.*
+!.env.example
+!.env.official.example
+!.env.gemini.example
+!.env.groq.example
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+data/
+output/
+tmp/

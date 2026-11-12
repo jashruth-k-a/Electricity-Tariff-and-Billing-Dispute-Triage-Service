@@ -1,0 +1,57 @@
+{
+  "state": "Karnataka",
+  "status": "approved",
+  "version": "kerc-lt-reviewed-2026-11-06-v2",
+  "reviewed_by": "Codex technical review of primary sources; faculty sign-off not represented",
+  "reviewed_on": "2026-11-06",
+  "review_valid_through": "2026-11-06",
+  "documents": [
+    {
+      "id": "KERC-TARIFF-2025",
+      "title": "KERC Combined Tariff Order 2025 / Annexure 9 / FY2026-27",
+      "path": "corpus/official/sources/tariff.pdf",
+      "source_url": "https://kerc.karnataka.gov.in/uploads/96731743148968.pdf",
+      "kind": "tariff",
+      "version": "source-reviewed-2026-11-06",
+      "effective_from": "2026-04-01",
+      "effective_to": "2026-11-06",
+      "coverage_note": "End date is the corpus review cutoff, not statutory expiry.",
+      "sha256": "d84997a4f7195b5c4ebb94064bd15428d2e8657c4f53e1671a074200595fcf50",
+      "annotations_path": "corpus/official/annotations/tariff.json"
+    },
+    {
+      "id": "KERC-COS-CURRENT-CLAUSES",
+      "title": "KERC Conditions of Supply / selected current clauses, reconciled against amendments",
+      "path": "corpus/official/sources/conditions.pdf",
+      "source_url": "https://kerc.karnataka.gov.in/storage/pdf-files/Regulations/ConditionsofSupplyofElectricitywithIandIIAmendments.pdf",
+      "kind": "supply",
+      "version": "source-reviewed-2026-11-06",
+      "effective_from": "2010-07-22",
+      "effective_to": "2026-11-06",
+      "coverage_note": "End date is the corpus review cutoff, not statutory expiry.",
+      "sha256": "a625669b200385d7f43d11e4b0718920b95d09957a608a2a3bc5d9fe0671a4b0",
+      "annotations_path": "corpus/official/annotations/conditions.json"
+    },
+    {
+      "id": "KERC-CONSUMER-RIGHTS-2022",
+      "title": "KERC Rights of Consumers, Standards of Performance and allied matters Regulations 2022",
+      "path": "corpus/official/sources/consumer-rights.pdf",
+      "source_url": "https://kerc.karnataka.gov.in/uploads/media_to_upload1720004194.pdf",
+      "kind": "supply",
+      "version": "source-reviewed-2026-11-06",
+      "effective_from": "2022-10-14",
+      "effective_to": "2026-11-06",
+      "coverage_note": "End date is the corpus review cutoff, not statutory expiry.",
+      "sha256": "d3b6ec171c1ee54dea89b25b8c91dc8a92bdc582cc385535394a652d2ffa71e1",
+      "annotations_path": "corpus/official/annotations/rights.json"
+    }
+  ],
+  "scope": "LT residential, commercial and industrial category positions on stated facts; meter/load/bill disputes routed for human verification. No penalties, bill sums, transfer-of-ownership liability, bulk/multi-unit metering or HT/EHT adjudication.",
+  "review_basis": {
+    "current_index": "https://kerc.karnataka.gov.in/27/regulations/en",
+    "current_index_sha256": "efd228bbc52b5bb8e699b015ecf2e36e3cfbf3f709ce8e77bc7c2fcf3bbf7c6f",
+    "tariff_index": "https://kerc.karnataka.gov.in/96/tariff-order/en",
+    "draft_index": "https://kerc.karnataka.gov.in/28/draft-regulations/en",
+    "amendment_inventory": "corpus/official/amendment-review.json"
+  }
+}

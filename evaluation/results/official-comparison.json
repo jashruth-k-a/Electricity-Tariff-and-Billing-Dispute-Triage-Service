@@ -1,0 +1,1812 @@
+{
+  "generated_at": 1794058601.8950086,
+  "machine": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "synthetic": false,
+  "cases_file": "evaluation/official-cases.json",
+  "metrics_definition": "docs/evaluation.md",
+  "variants": {
+    "v1": {
+      "complete": true,
+      "cases": [
+        {
+          "id": "residential-correct",
+          "run_id": "2134b862-de74-4320-b6b4-0aff7e2d680b",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.2,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0019705,
+          "elapsed_seconds": 16.294563055038452,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3802,
+            "completion_tokens": 680
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "residential-misclassified",
+          "run_id": "3ad7be8c-eed3-414c-bbf3-9b236d5b44c8",
+          "passed": false,
+          "expected": {
+            "route": "revision-recommended",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.2,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0024089999999999997,
+          "elapsed_seconds": 13.921909093856812,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4116,
+            "completion_tokens": 920
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "tailoring-reference",
+          "run_id": "83405722-0878-4209-8839-e10009123806",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.00184825,
+          "elapsed_seconds": 26.880897998809814,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3859,
+            "completion_tokens": 589
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "tailoring-independent-shop",
+          "run_id": "5fb36a78-c17a-4c61-98d1-c62d2fa72891",
+          "passed": false,
+          "expected": {
+            "route": "revision-recommended",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-5"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.2,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0024660000000000003,
+          "elapsed_seconds": 80.33512163162231,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4170,
+            "completion_tokens": 949
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "beauty-parlour-at-home",
+          "run_id": "92305a9e-8e07-41dd-8c4d-90a8c21233b1",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.00204775,
+          "elapsed_seconds": 23.770309686660767,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4099,
+            "completion_tokens": 682
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "beauty-parlour-independent",
+          "run_id": "f3cb4f98-33f3-46c3-9f9f-366586e98720",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-3(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.00233575,
+          "elapsed_seconds": 10.515123128890991,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4063,
+            "completion_tokens": 880
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "legal-consultancy-at-home",
+          "run_id": "8119bc2e-96e2-4990-9d62-1c7faa175b2e",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.00182475,
+          "elapsed_seconds": 13.073458194732666,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3861,
+            "completion_tokens": 573
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "medical-consultancy-at-home",
+          "run_id": "dc82d24f-5a52-4550-beb7-161513657ce9",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0020455,
+          "elapsed_seconds": 13.548882961273193,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4042,
+            "completion_tokens": 690
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "private-clinic-independent",
+          "run_id": "116024e8-0c6a-41b3-92e9-2721ff83d45a",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-3(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0018544999999999998,
+          "elapsed_seconds": 11.767934560775757,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3782,
+            "completion_tokens": 606
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "job-typing-at-home",
+          "run_id": "9d18ae9d-4062-4108-ae31-d0efda37480f",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.00190675,
+          "elapsed_seconds": 22.372719526290894,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4015,
+            "completion_tokens": 602
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "paying-guests-shared-home",
+          "run_id": "aa9a39cd-db34-4839-9640-1408b88c0df0",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.00206725,
+          "elapsed_seconds": 76.02453708648682,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3859,
+            "completion_tokens": 735
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "paying-guests-exclusive-premises",
+          "run_id": "81901ec6-64ad-42db-a8ac-3da4d701d9c5",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-3(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0018885,
+          "elapsed_seconds": 11.845402717590332,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4086,
+            "completion_tokens": 578
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "bakery-manufacturing",
+          "run_id": "b39ef729-f034-4b3e-840f-b52d0181c262",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-5"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0020889999999999997,
+          "elapsed_seconds": 132.42967295646667,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4024,
+            "completion_tokens": 722
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "bakery-retail",
+          "run_id": "bf488abe-fb9e-450e-b549-fc3b04b51df9",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-3(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0019537499999999998,
+          "elapsed_seconds": 18.90422224998474,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3855,
+            "completion_tokens": 660
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "load-discrepancy",
+          "run_id": "d77ac954-25b4-4b85-b551-2700bf8ffd5f",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / General-17"
+            ],
+            "issue_type": "load-violation"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.2,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0029595000000000003,
+          "elapsed_seconds": 87.21999192237854,
+          "model_calls": 4,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4878,
+            "completion_tokens": 1160
+          },
+          "prompt_hashes": [
+            "0809ebcb3b81bc62f364eb01f7188bd39807f3955721ca594c6c88d75a9f60fd",
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "meter-accuracy",
+          "run_id": "04fc97d2-fd92-449c-8867-513ed36ad76e",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "6(11)(vii)-(xi)"
+            ],
+            "issue_type": "meter-accuracy"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.002082,
+          "elapsed_seconds": 128.9132571220398,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3726,
+            "completion_tokens": 767
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "unsettled-mixed-workshop",
+          "run_id": "eb0d530f-b198-4283-a0d5-f95e929953ee",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.00207575,
+          "elapsed_seconds": 33.49782872200012,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4097,
+            "completion_tokens": 701
+          },
+          "prompt_hashes": [
+            "0809ebcb3b81bc62f364eb01f7188bd39807f3955721ca594c6c88d75a9f60fd",
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "unknown-premises-facts",
+          "run_id": "8aa7a8dc-24d7-4223-a74a-b0ac7913f821",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.021613597869873047,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "outside-state",
+          "run_id": "81966f01-7242-47aa-acd3-edd7e7a31581",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.023741483688354492,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "outside-ht",
+          "run_id": "78fe87a8-3eb1-4a77-a5b2-00c060e9cc0b",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.022164583206176758,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "outside-agriculture",
+          "run_id": "9474b033-5fbf-41cb-a3de-41b2b0864c45",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.02451038360595703,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "outside-reviewed-period",
+          "run_id": "da912440-93c9-4fca-9a83-402771ea9f51",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.027057647705078125,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "arrears-documentary-dispute",
+          "run_id": "10027a47-aa1c-470a-9952-404c62ec7fab",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "7 / complaints-handling"
+            ],
+            "issue_type": "arrears"
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0002155,
+          "elapsed_seconds": 2.13169264793396,
+          "model_calls": 1,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 616,
+            "completion_tokens": 41
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        },
+        {
+          "id": "disconnection-documentary-dispute",
+          "run_id": "6da95e0c-f15a-4212-a06e-a4fca9dbb784",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "10 / grievance-redressal"
+            ],
+            "issue_type": "disconnection"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.00203425,
+          "elapsed_seconds": 61.722766399383545,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3673,
+            "completion_tokens": 744
+          },
+          "prompt_hashes": [
+            "2b36fe7ef126239dbf1222b6168873a84e79f0e6c30686f411e805b90867b493"
+          ]
+        }
+      ],
+      "metrics": {
+        "groundedness": 0.75,
+        "context_relevance": 0.23333333333333334,
+        "faithfulness": 0.041666666666666664,
+        "hallucination_rate": 0.7083333333333334
+      },
+      "pass_rate": 0.25,
+      "p50_seconds": 16.294563055038452,
+      "p95_seconds": 128.9132571220398,
+      "cost_per_100_runs": 0.15864270833333333,
+      "cost_by_agent": {
+        "investigator": 0.036790750000000004,
+        "verifier": 0.0012835
+      },
+      "total_model_calls": 56
+    },
+    "v6": {
+      "complete": true,
+      "cases": [
+        {
+          "id": "residential-correct",
+          "run_id": "7d576520-11d0-4234-87b0-71929094473b",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.3333333333333333,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.00126875,
+          "elapsed_seconds": 27.158358335494995,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3551,
+            "completion_tokens": 254
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "residential-misclassified",
+          "run_id": "2e245610-ac71-4bea-82c4-50bb8945a472",
+          "passed": false,
+          "expected": {
+            "route": "revision-recommended",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.000241,
+          "elapsed_seconds": 15.65697193145752,
+          "model_calls": 1,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 796,
+            "completion_tokens": 28
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902"
+          ]
+        },
+        {
+          "id": "tailoring-reference",
+          "run_id": "711f8532-60e8-44a6-aa3e-ba602e55769e",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.6666666666666666,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.00140725,
+          "elapsed_seconds": 42.383835315704346,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3679,
+            "completion_tokens": 325
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "tailoring-independent-shop",
+          "run_id": "62dbe113-b61e-479b-be36-8680136a384f",
+          "passed": false,
+          "expected": {
+            "route": "revision-recommended",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-5"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.000242,
+          "elapsed_seconds": 19.6360867023468,
+          "model_calls": 1,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 794,
+            "completion_tokens": 29
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902"
+          ]
+        },
+        {
+          "id": "beauty-parlour-at-home",
+          "run_id": "b40d0254-35bb-481a-94dc-4c95be97e329",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.6666666666666666,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0015432500000000001,
+          "elapsed_seconds": 29.892051219940186,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3665,
+            "completion_tokens": 418
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "beauty-parlour-independent",
+          "run_id": "03f18e07-152f-49c9-8e0d-15e858a96b20",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-3(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.00023975,
+          "elapsed_seconds": 1.757063627243042,
+          "model_calls": 1,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 779,
+            "completion_tokens": 30
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902"
+          ]
+        },
+        {
+          "id": "legal-consultancy-at-home",
+          "run_id": "3b43db3e-7bf8-4958-935a-d7ccf06ee15c",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.6666666666666666,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0014,
+          "elapsed_seconds": 12.440059423446655,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3674,
+            "completion_tokens": 321
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "medical-consultancy-at-home",
+          "run_id": "0e2a0578-c77a-4096-a6b9-4047921e3586",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.6666666666666666,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0016554999999999999,
+          "elapsed_seconds": 17.267695903778076,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3646,
+            "completion_tokens": 496
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "private-clinic-independent",
+          "run_id": "ad24e844-b685-47b3-8d9e-a61a9f2b6f85",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-3(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.000242,
+          "elapsed_seconds": 4.134799003601074,
+          "model_calls": 1,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 782,
+            "completion_tokens": 31
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902"
+          ]
+        },
+        {
+          "id": "job-typing-at-home",
+          "run_id": "278d194c-02a8-49a4-ae0f-32c535a6a285",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.6666666666666666,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.00138225,
+          "elapsed_seconds": 86.53264689445496,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3639,
+            "completion_tokens": 315
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "paying-guests-shared-home",
+          "run_id": "a9cc0258-4a59-4888-b305-66dc3236d1b6",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.3333333333333333,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0016702499999999999,
+          "elapsed_seconds": 12.129117965698242,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3585,
+            "completion_tokens": 516
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902"
+          ]
+        },
+        {
+          "id": "paying-guests-exclusive-premises",
+          "run_id": "318786c7-3cd0-4830-b7aa-3b007f05f290",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-3(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.3333333333333333,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.00125225,
+          "elapsed_seconds": 25.128215789794922,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3533,
+            "completion_tokens": 246
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "bakery-manufacturing",
+          "run_id": "5e8d7983-46ee-4e18-950f-026402dfe4e0",
+          "passed": false,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-5"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0002425,
+          "elapsed_seconds": 7.32138466835022,
+          "model_calls": 1,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 784,
+            "completion_tokens": 31
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902"
+          ]
+        },
+        {
+          "id": "bakery-retail",
+          "run_id": "a91cd867-e6e1-4fca-91d7-e207244529fd",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-3(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.6666666666666666,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.00135675,
+          "elapsed_seconds": 19.47661328315735,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3651,
+            "completion_tokens": 296
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "load-discrepancy",
+          "run_id": "be23df83-2bdd-4085-b4be-0d6ecae45429",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / General-17"
+            ],
+            "issue_type": "load-violation"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.3333333333333333,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0016344999999999999,
+          "elapsed_seconds": 20.832737922668457,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3418,
+            "completion_tokens": 520
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "meter-accuracy",
+          "run_id": "3bfadb31-b235-4833-a9e4-13c45a8b0ee8",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "6(11)(vii)-(xi)"
+            ],
+            "issue_type": "meter-accuracy"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.3333333333333333,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.001307,
+          "elapsed_seconds": 11.787670612335205,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3428,
+            "completion_tokens": 300
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "unsettled-mixed-workshop",
+          "run_id": "9023dc4d-d97f-4335-9fe3-948ce7108f7e",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ],
+            "issue_type": "tariff-category"
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.6666666666666666,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.001461,
+          "elapsed_seconds": 13.036203145980835,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 3738,
+            "completion_tokens": 351
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        },
+        {
+          "id": "unknown-premises-facts",
+          "run_id": "fcb74b82-b59e-468d-8351-18299a17c5b6",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.024732589721679688,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "outside-state",
+          "run_id": "5b38bddc-c354-4d22-8efc-b93596fea4f5",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.02560114860534668,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "outside-ht",
+          "run_id": "09990872-6706-4eb1-bf69-592fea0a9966",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.021797895431518555,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "outside-agriculture",
+          "run_id": "ef380750-e98a-4d83-85a5-33ead2d782ac",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.021958351135253906,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "outside-reviewed-period",
+          "run_id": "7064a415-0511-4813-9a09-2895e2880aad",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.03450655937194824,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "arrears-documentary-dispute",
+          "run_id": "f8c7cf2f-88e6-4921-a207-69dc9aca2115",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "7 / complaints-handling"
+            ],
+            "issue_type": "arrears"
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.000693,
+          "elapsed_seconds": 15.411856651306152,
+          "model_calls": 2,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 1650,
+            "completion_tokens": 187
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902"
+          ]
+        },
+        {
+          "id": "disconnection-documentary-dispute",
+          "run_id": "5d978d1f-9de3-4c8a-b446-e72d3b5bf43e",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "10 / grievance-redressal"
+            ],
+            "issue_type": "disconnection"
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.00024075,
+          "elapsed_seconds": 4.317586898803711,
+          "model_calls": 1,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "gemini-3.1-flash-lite",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 795,
+            "completion_tokens": 28
+          },
+          "prompt_hashes": [
+            "00c570fb2f3c2b11b662762a7b4a30ec8c739d786a6b39a4ece365bc54d1a902"
+          ]
+        }
+      ],
+      "metrics": {
+        "groundedness": 0.5,
+        "context_relevance": 0.2638888888888889,
+        "faithfulness": 0.4583333333333333,
+        "hallucination_rate": 0.08333333333333333
+      },
+      "pass_rate": 0.625,
+      "p50_seconds": 13.036203145980835,
+      "p95_seconds": 42.383835315704346,
+      "cost_per_100_runs": 0.081165625,
+      "cost_by_agent": {
+        "investigator": 0.015006,
+        "verifier": 0.00447375
+      },
+      "total_model_calls": 44
+    }
+  },
+  "configuration": {
+    "mode": "production",
+    "corpus": {
+      "collection": "corpus-9e0a7224acca2e933a19d510",
+      "fingerprint": "9e0a7224acca2e933a19d5107af0bb99f1277eccefacbd3ea0295354dc5cdb15",
+      "version": "kerc-lt-reviewed-2026-11-06-v2",
+      "status": "approved",
+      "state": "Karnataka",
+      "built_at": 1794055864.9924,
+      "chunks": 18,
+      "ingestion_seconds": 2.6394517540011293,
+      "chunks_per_second": 6.81959803687031,
+      "documents": [
+        {
+          "id": "KERC-TARIFF-2025",
+          "title": "KERC Combined Tariff Order 2025 / Annexure 9 / FY2026-27",
+          "path": "corpus/official/sources/tariff.pdf",
+          "source_url": "https://kerc.karnataka.gov.in/uploads/96731743148968.pdf",
+          "kind": "tariff",
+          "version": "source-reviewed-2026-11-06",
+          "effective_from": "2026-04-01",
+          "effective_to": "2026-11-06",
+          "coverage_note": "End date is the corpus review cutoff, not statutory expiry.",
+          "sha256": "d84997a4f7195b5c4ebb94064bd15428d2e8657c4f53e1671a074200595fcf50",
+          "annotations_path": "corpus/official/annotations/tariff.json"
+        },
+        {
+          "id": "KERC-COS-CURRENT-CLAUSES",
+          "title": "KERC Conditions of Supply / selected current clauses, reconciled against amendments",
+          "path": "corpus/official/sources/conditions.pdf",
+          "source_url": "https://kerc.karnataka.gov.in/storage/pdf-files/Regulations/ConditionsofSupplyofElectricitywithIandIIAmendments.pdf",
+          "kind": "supply",
+          "version": "source-reviewed-2026-11-06",
+          "effective_from": "2010-07-22",
+          "effective_to": "2026-11-06",
+          "coverage_note": "End date is the corpus review cutoff, not statutory expiry.",
+          "sha256": "a625669b200385d7f43d11e4b0718920b95d09957a608a2a3bc5d9fe0671a4b0",
+          "annotations_path": "corpus/official/annotations/conditions.json"
+        },
+        {
+          "id": "KERC-CONSUMER-RIGHTS-2022",
+          "title": "KERC Rights of Consumers, Standards of Performance and allied matters Regulations 2022",
+          "path": "corpus/official/sources/consumer-rights.pdf",
+          "source_url": "https://kerc.karnataka.gov.in/uploads/media_to_upload1720004194.pdf",
+          "kind": "supply",
+          "version": "source-reviewed-2026-11-06",
+          "effective_from": "2022-10-14",
+          "effective_to": "2026-11-06",
+          "coverage_note": "End date is the corpus review cutoff, not statutory expiry.",
+          "sha256": "d3b6ec171c1ee54dea89b25b8c91dc8a92bdc582cc385535394a652d2ffa71e1",
+          "annotations_path": "corpus/official/annotations/rights.json"
+        }
+      ],
+      "embedding_backend": "ollama"
+    },
+    "prompt_version": "v6",
+    "max_run_seconds": 600,
+    "slo_p95_seconds": 60,
+    "advisory_only": true,
+    "authentication_required": false,
+    "pricing_label": "Google-published-standard-rate-estimate-2026-11-07-not-an-invoice"
+  },
+  "change": "v1 -> v6: compare the versioned investigator and verifier prompt artifacts; backend, corpus, structured contract and cache bypass are shared",
+  "delta": {
+    "groundedness": -0.25,
+    "context_relevance": 0.030555555555555558,
+    "faithfulness": 0.41666666666666663,
+    "hallucination_rate": -0.625
+  },
+  "pass_rate_delta": 0.375
+}

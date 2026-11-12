@@ -1,0 +1,23 @@
+{
+  "label": "cache-off",
+  "generated_at": 1793980248.6102493,
+  "machine": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "users": 3,
+  "worker_count": 3,
+  "wall_seconds": 19.75809767999999,
+  "stub_delay_seconds": 1.5,
+  "repeated_workload": true,
+  "cache_enabled": "false",
+  "completed_runs": 6,
+  "verified_runs": 6,
+  "verified_fraction": 1.0,
+  "terminal_rps": 0.30367295967331215,
+  "verified_rps": 0.30367295967331215,
+  "p50_seconds": 8.563865928999803,
+  "p95_seconds": 8.654540470000029,
+  "slo_p95_seconds": 60,
+  "cost_per_run": 0.0,
+  "cache_hits": 0,
+  "locust_exit_code": 0,
+  "slo_met": true
+}

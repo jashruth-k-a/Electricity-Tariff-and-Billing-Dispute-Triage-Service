@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-07",
+  "status": "interrupted; not a valid prompt-quality comparison",
+  "reason": "HTTP 429 provider quota failures",
+  "model": "gemini-3.5-flash",
+  "variants": {
+    "v1": {
+      "completed": 24,
+      "quota_failed_cases": 18
+    },
+    "v5": {
+      "completed": 13,
+      "quota_failed_cases": 13
+    }
+  }
+}

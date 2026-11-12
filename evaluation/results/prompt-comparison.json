@@ -1,0 +1,1639 @@
+{
+  "generated_at": 1793979420.673503,
+  "machine": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "synthetic": true,
+  "cases_file": "evaluation/cases.json",
+  "metrics_definition": "docs/evaluation.md",
+  "variants": {
+    "v1": {
+      "cases": [
+        {
+          "id": "residential-correct",
+          "run_id": "49674073-2369-4924-89ad-94196c3af2fd",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "D1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 11.540846109390259,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5604,
+            "completion_tokens": 335
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "residential-wrong",
+          "run_id": "05925aa7-7bfc-4ee2-8a27-39a82a25444a",
+          "passed": true,
+          "expected": {
+            "route": "revision-recommended",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "D1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 11.496179342269897,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5630,
+            "completion_tokens": 358
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "shop-correct",
+          "run_id": "8de8f8b7-5714-4fbc-b0fc-aac5a9d7ea69",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "C1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 11.497910737991333,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5566,
+            "completion_tokens": 330
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "shop-wrong",
+          "run_id": "9728ad95-60ad-4e5e-9eb5-f34afeceddf0",
+          "passed": true,
+          "expected": {
+            "route": "revision-recommended",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "C1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.593343257904053,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5581,
+            "completion_tokens": 352
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "factory-correct",
+          "run_id": "a7400da1-80f2-4788-a85b-7275dd08bbec",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "I1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.592498064041138,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5183,
+            "completion_tokens": 347
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "factory-wrong",
+          "run_id": "53fe91d4-ed88-43d2-a9f5-4d573b9575e4",
+          "passed": true,
+          "expected": {
+            "route": "revision-recommended",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "I1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.52754282951355,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5181,
+            "completion_tokens": 369
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "tailoring-reference",
+          "run_id": "1c69456f-e709-4151-8863-63f5e42cb184",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 10.244116067886353,
+          "model_calls": 6,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 10015,
+            "completion_tokens": 573
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d"
+          ]
+        },
+        {
+          "id": "tailoring-small-area",
+          "run_id": "a431a3a8-9eb0-417a-8099-da47787aebb8",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 10.243819236755371,
+          "model_calls": 6,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 9948,
+            "completion_tokens": 573
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d"
+          ]
+        },
+        {
+          "id": "home-office",
+          "run_id": "19c75a64-6e7d-4d71-93f4-b50a2dd76f23",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 10.22031021118164,
+          "model_calls": 6,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 9946,
+            "completion_tokens": 573
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d"
+          ]
+        },
+        {
+          "id": "home-shop-separate-meter",
+          "run_id": "6172e301-b00b-4ab9-a741-2a686b5dc749",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.2,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 12.99884295463562,
+          "model_calls": 6,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 9980,
+            "completion_tokens": 662
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d"
+          ]
+        },
+        {
+          "id": "home-salon",
+          "run_id": "ed7ec17c-7635-4e45-9ddf-92c4f2367f00",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 12.987008571624756,
+          "model_calls": 6,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 9937,
+            "completion_tokens": 573
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d"
+          ]
+        },
+        {
+          "id": "hidden-mixed-description",
+          "run_id": "2a15223e-93a3-45f3-95aa-fce692ade758",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.4,
+            "faithfulness": 0.0,
+            "hallucination_rate": 1.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 13.00098204612732,
+          "model_calls": 6,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 9938,
+            "completion_tokens": 573
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d"
+          ]
+        },
+        {
+          "id": "changed-use",
+          "run_id": "3dcd0be7-3bbc-4c51-a247-c7f9a0d64b2a",
+          "passed": false,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "S1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.411584377288818,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5662,
+            "completion_tokens": 358
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "fast-meter",
+          "run_id": "1af52a8f-b258-4fb4-bbdb-27879fc0d429",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "S2"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.404750108718872,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5674,
+            "completion_tokens": 376
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "load-exceeds",
+          "run_id": "cff10476-77ab-4105-8b37-4d474c2111f8",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "S3"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.29953408241272,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5206,
+            "completion_tokens": 374
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "arrears-dispute",
+          "run_id": "76981548-e0f9-4c5a-a457-6006e3df6446",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "S4"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.296428680419922,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5729,
+            "completion_tokens": 382
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "disconnection",
+          "run_id": "37fae47f-f517-44f2-a956-752777ee7ffe",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "S4"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.278556108474731,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5708,
+            "completion_tokens": 383
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d",
+            "91cbe13deacd2a431d9d4a24650f31921a732cc0d35224d9396dcb1773b888b5"
+          ]
+        },
+        {
+          "id": "out-of-state",
+          "run_id": "f582c65c-eee8-44d2-9d24-f5c2a73af9c7",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.05013251304626465,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "out-of-scope-ht",
+          "run_id": "0a6e140f-77ca-43c6-bc0f-e1a68d78133f",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.04956984519958496,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "agricultural",
+          "run_id": "2c5c6807-2042-44bb-84d3-a8731ee9c122",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.053566932678222656,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "unknown-use",
+          "run_id": "d968f7f2-2355-4342-bbbd-76330f208e60",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 6.731646299362183,
+          "model_calls": 4,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4334,
+            "completion_tokens": 129
+          },
+          "prompt_hashes": [
+            "151d529896c9d54860145d86210fed9d505f54637a96fc1cfc7905f5659dc26d"
+          ]
+        },
+        {
+          "id": "historical-bill",
+          "run_id": "6c9b51b5-7189-4abd-b4cb-24971ffeb05b",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.04859471321105957,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        }
+      ],
+      "metrics": {
+        "groundedness": 0.7727272727272727,
+        "context_relevance": 0.35,
+        "faithfulness": 0.5,
+        "hallucination_rate": 0.2727272727272727
+      },
+      "pass_rate": 0.6818181818181818,
+      "p50_seconds": 8.592498064041138,
+      "p95_seconds": 12.99884295463562,
+      "cost_per_100_runs": 0.0,
+      "cost_by_agent": {
+        "investigator": 0.0,
+        "verifier": 0.0
+      },
+      "total_model_calls": 95
+    },
+    "v2": {
+      "cases": [
+        {
+          "id": "residential-correct",
+          "run_id": "77828d3b-a39f-4639-b0fa-96cba6cd123c",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "D1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 11.301488637924194,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6666,
+            "completion_tokens": 335
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "residential-wrong",
+          "run_id": "d6f4b3b4-012e-46a4-826d-7d21e70595a2",
+          "passed": true,
+          "expected": {
+            "route": "revision-recommended",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "D1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 11.288849830627441,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6692,
+            "completion_tokens": 358
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "shop-correct",
+          "run_id": "1fcdb4c8-18ce-4156-92e0-9656923457dd",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "C1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 11.28773045539856,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6630,
+            "completion_tokens": 330
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "shop-wrong",
+          "run_id": "cc1b6610-e603-4824-9fc6-a904831740d0",
+          "passed": true,
+          "expected": {
+            "route": "revision-recommended",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "C1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.437095403671265,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6643,
+            "completion_tokens": 352
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "factory-correct",
+          "run_id": "d6ad01c3-d0c6-454d-8fd7-523d7682f551",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "I1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.405760526657104,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6246,
+            "completion_tokens": 347
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "factory-wrong",
+          "run_id": "595d8d7e-bdb5-44e3-9b2b-56a0f114bef5",
+          "passed": true,
+          "expected": {
+            "route": "revision-recommended",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "I1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.465933799743652,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6245,
+            "completion_tokens": 369
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "tailoring-reference",
+          "run_id": "478d9c65-09dc-4cf5-a9b1-fb4b739313ea",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 1.0,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.335070610046387,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 7049,
+            "completion_tokens": 627
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "tailoring-small-area",
+          "run_id": "a07515e6-fa8b-41b9-8dea-38743fa4d536",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 1.0,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.289275407791138,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6992,
+            "completion_tokens": 627
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "home-office",
+          "run_id": "c9baf0bb-1c4b-4b9f-a4e5-e824be30d4f5",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 1.0,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.329854011535645,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6992,
+            "completion_tokens": 627
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "home-shop-separate-meter",
+          "run_id": "024c3bfc-a430-4d36-aabc-f5b4e5c57fac",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.6666666666666666,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 12.76333236694336,
+          "model_calls": 6,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 9688,
+            "completion_tokens": 639
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "home-salon",
+          "run_id": "0630b342-3ff2-42f1-8688-80b17d879547",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 1.0,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.319083452224731,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6984,
+            "completion_tokens": 627
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "hidden-mixed-description",
+          "run_id": "85c24acf-a8b4-460d-8051-665a9b2eb454",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "M1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 1.0,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.31099820137024,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6986,
+            "completion_tokens": 627
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "changed-use",
+          "run_id": "4e12b199-0f41-4c10-8f83-b4a3b0b73948",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "D1",
+              "S1"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.6666666666666666,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 11.158563375473022,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 7381,
+            "completion_tokens": 544
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "fast-meter",
+          "run_id": "a32e12ec-6bb6-40d5-ba35-eabe59f9b17a",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "S2"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 11.104171514511108,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6735,
+            "completion_tokens": 376
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "load-exceeds",
+          "run_id": "a7f93e72-f46d-421e-b8bc-6f0d4f46fc9a",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "S3"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.382742404937744,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6271,
+            "completion_tokens": 374
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "arrears-dispute",
+          "run_id": "00aba7e5-6850-4302-8cd9-ded8e76c7b82",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "S4"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.59330439567566,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6791,
+            "completion_tokens": 382
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "disconnection",
+          "run_id": "06ce410f-3ffb-420b-afd9-8171afa21699",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": true,
+            "clauses": [
+              "S4"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 8.588654041290283,
+          "model_calls": 5,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 6771,
+            "completion_tokens": 383
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613",
+            "1af631459022330b8fdbf4f91004d6854e92c2a46d4931b8a464832d925658b9"
+          ]
+        },
+        {
+          "id": "out-of-state",
+          "run_id": "b694b146-f5a6-4fd0-9bc4-36095a1148a8",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.06212782859802246,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "out-of-scope-ht",
+          "run_id": "c119b64f-8f28-4a72-b67b-58cb08893698",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.0629737377166748,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "agricultural",
+          "run_id": "8d7f2857-2f13-496c-8a27-d0395351d3bc",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.05355095863342285,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        },
+        {
+          "id": "unknown-use",
+          "run_id": "a75e9db7-f5f0-409f-8a4c-f1ace61b15a7",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0,
+          "elapsed_seconds": 6.669774055480957,
+          "model_calls": 4,
+          "model_identities": [
+            {
+              "backend": "legacy",
+              "model": "unknown",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 5333,
+            "completion_tokens": 129
+          },
+          "prompt_hashes": [
+            "180b301d6e20d10f5df95269b4dc16dbe4c9925b01515f4c2e933eef47597613"
+          ]
+        },
+        {
+          "id": "historical-bill",
+          "run_id": "db7479f2-522d-4858-a653-1a1612b6ec03",
+          "passed": true,
+          "expected": {
+            "route": "site-inspection-required",
+            "escalation_required": true,
+            "verified": false,
+            "clauses": []
+          },
+          "metrics": {
+            "groundedness": 0.0,
+            "context_relevance": 0.0,
+            "faithfulness": 0.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0,
+          "elapsed_seconds": 0.05394482612609863,
+          "model_calls": 0,
+          "model_identities": [],
+          "reported_tokens": {
+            "prompt_tokens": 0,
+            "completion_tokens": 0
+          },
+          "prompt_hashes": []
+        }
+      ],
+      "metrics": {
+        "groundedness": 0.7727272727272727,
+        "context_relevance": 0.5151515151515151,
+        "faithfulness": 0.7727272727272727,
+        "hallucination_rate": 0.0
+      },
+      "pass_rate": 1.0,
+      "p50_seconds": 8.405760526657104,
+      "p95_seconds": 11.301488637924194,
+      "cost_per_100_runs": 0.0,
+      "cost_by_agent": {
+        "investigator": 0.0,
+        "verifier": 0.0
+      },
+      "total_model_calls": 90
+    }
+  },
+  "configuration": {
+    "mode": "demo",
+    "corpus": {
+      "collection": "corpus-cbfae6549b540fb177169196",
+      "fingerprint": "cbfae6549b540fb17716919602f08381d9a58969c2d51cf4d83edc29c4f75f6d",
+      "version": "demo-2026-11-06-v1",
+      "status": "synthetic-demo",
+      "state": "Karnataka",
+      "built_at": 1793979271.8461878,
+      "chunks": 9,
+      "ingestion_seconds": 0.9222264869995342,
+      "chunks_per_second": 9.758991014540818,
+      "documents": [
+        {
+          "id": "DEMO-TARIFF",
+          "title": "Synthetic teaching tariff - NOT a KERC order",
+          "path": "corpus/demo/tariff.json",
+          "source_url": "",
+          "version": "demo-v1",
+          "effective_from": "2020-01-01",
+          "effective_to": "2030-12-31",
+          "kind": "tariff"
+        },
+        {
+          "id": "DEMO-SUPPLY",
+          "title": "Synthetic teaching supply conditions - NOT regulation",
+          "path": "corpus/demo/supply.json",
+          "source_url": "",
+          "version": "demo-v1",
+          "effective_from": "2020-01-01",
+          "effective_to": "2030-12-31",
+          "kind": "supply"
+        }
+      ],
+      "embedding_backend": "hash"
+    },
+    "prompt_version": "v2",
+    "slo_p95_seconds": 60,
+    "advisory_only": true,
+    "authentication_required": false,
+    "pricing_label": "synthetic-zero-cost"
+  },
+  "change": "v2 explicitly searches mixed/changed-use modifiers; v1 searches the apparent category",
+  "delta": {
+    "groundedness": 0.0,
+    "context_relevance": 0.16515151515151516,
+    "faithfulness": 0.2727272727272727,
+    "hallucination_rate": -0.2727272727272727
+  },
+  "pass_rate_delta": 0.31818181818181823
+}

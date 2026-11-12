@@ -1,0 +1,491 @@
+[
+  {
+    "id": "residential-correct",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "description": "My dwelling is used exclusively as a home. Is domestic billing correct?",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "residential-wrong",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "commercial",
+      "premises_use": "residential",
+      "description": "My dwelling is used exclusively as a home. Is domestic billing correct?",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "revision-recommended",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "D1"
+      ]
+    }
+  },
+  {
+    "id": "shop-correct",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "commercial",
+      "premises_use": "commercial",
+      "description": "My entire premises is a retail shop. Is commercial classification correct?",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "C1"
+      ]
+    }
+  },
+  {
+    "id": "shop-wrong",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "commercial",
+      "description": "My entire premises is a retail shop. I dispute domestic classification.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "revision-recommended",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "C1"
+      ]
+    }
+  },
+  {
+    "id": "factory-correct",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "industrial",
+      "premises_use": "industrial",
+      "description": "The whole premises is used for manufacturing goods. Is industrial classification appropriate?",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "bill-stands-with-reason",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "I1"
+      ]
+    }
+  },
+  {
+    "id": "factory-wrong",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "industrial",
+      "description": "The whole premises is used for manufacturing goods. Please check the category.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "revision-recommended",
+      "escalation_required": false,
+      "verified": true,
+      "clauses": [
+        "I1"
+      ]
+    }
+  },
+  {
+    "id": "tailoring-reference",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "description": "I have a domestic connection. I run a small tailoring shop from one room of the house. Which tariff category should I be billed under?",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "tailoring"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "D1",
+        "M1"
+      ]
+    }
+  },
+  {
+    "id": "tailoring-small-area",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "description": "I run a tailoring business from one room at home. Does the small area settle my category?",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "tailoring",
+      "business_area_sqm": 8,
+      "total_area_sqm": 100
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "D1",
+        "M1"
+      ]
+    }
+  },
+  {
+    "id": "home-office",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "description": "Part of my house is an office serving business clients. Please review domestic classification.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "office"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "D1",
+        "M1"
+      ]
+    }
+  },
+  {
+    "id": "home-shop-separate-meter",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "description": "A shop operates in my house and has a separate meter. Please investigate which category applies.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "retail shop",
+      "separate_meter": true
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "D1",
+        "M1"
+      ]
+    }
+  },
+  {
+    "id": "home-salon",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "mixed",
+      "description": "I operate a salon in one room of my residential dwelling. Can the category stay domestic?",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01",
+      "business_activity": "salon"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "D1",
+        "M1"
+      ]
+    }
+  },
+  {
+    "id": "hidden-mixed-description",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "description": "I use one room of my house as a tailoring shop. The connection is domestic. Please check.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "D1",
+        "M1"
+      ]
+    }
+  },
+  {
+    "id": "changed-use",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "commercial",
+      "premises_use": "residential",
+      "description": "My premises is exclusively residential. I dispute re-categorisation and have no inspection record.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "D1",
+        "S1"
+      ]
+    }
+  },
+  {
+    "id": "fast-meter",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "description": "My meter seems fast and the recorded usage is unusually high. Please investigate accuracy.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "S2"
+      ]
+    }
+  },
+  {
+    "id": "load-exceeds",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "description": "My connected load is seven kilowatts but only five is sanctioned. I dispute the load violation.",
+      "connected_load_kw": 7,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "S3"
+      ]
+    }
+  },
+  {
+    "id": "arrears-dispute",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "description": "My bill contains old arrears that I believe I already paid. Please review the payment records.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "S4"
+      ]
+    }
+  },
+  {
+    "id": "disconnection",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "description": "I dispute disconnection for an outstanding balance and have no notice record.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": true,
+      "clauses": [
+        "S4"
+      ]
+    }
+  },
+  {
+    "id": "out-of-state",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Kerala",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "description": "My dwelling is used exclusively as a home. Is domestic billing correct?",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": false,
+      "clauses": []
+    }
+  },
+  {
+    "id": "out-of-scope-ht",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "HT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "description": "My dwelling is used exclusively as a home. Is domestic billing correct?",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": false,
+      "clauses": []
+    }
+  },
+  {
+    "id": "agricultural",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "agricultural",
+      "premises_use": "agricultural",
+      "description": "This connection serves an agricultural irrigation pump. Please check my category.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": false,
+      "clauses": []
+    }
+  },
+  {
+    "id": "unknown-use",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "unknown",
+      "description": "I am unable to establish what the premises is currently used for. Please investigate.",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2026-10-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": false,
+      "clauses": []
+    }
+  },
+  {
+    "id": "historical-bill",
+    "reference_kind": "synthetic-teaching-fixture",
+    "request": {
+      "state": "Karnataka",
+      "connection_type": "LT",
+      "billed_category": "domestic",
+      "premises_use": "residential",
+      "description": "My dwelling is used exclusively as a home. Is domestic billing correct?",
+      "connected_load_kw": 3,
+      "sanctioned_load_kw": 5,
+      "billing_date": "2018-01-01"
+    },
+    "expected": {
+      "route": "site-inspection-required",
+      "escalation_required": true,
+      "verified": false,
+      "clauses": []
+    }
+  }
+]

@@ -1,0 +1,129 @@
+{
+  "generated_at": 1794056845.7073588,
+  "machine": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "synthetic": false,
+  "cases_file": "output/official-probe-cases.json",
+  "metrics_definition": "docs/evaluation.md",
+  "variants": {
+    "v6": {
+      "complete": true,
+      "cases": [
+        {
+          "id": "tailoring-reference",
+          "run_id": "ec95e839-245c-48c8-9521-f164b375aeea",
+          "passed": true,
+          "expected": {
+            "route": "bill-stands-with-reason",
+            "escalation_required": false,
+            "verified": true,
+            "clauses": [
+              "Annexure-9 / LT-1",
+              "42.02(a)"
+            ]
+          },
+          "metrics": {
+            "groundedness": 1.0,
+            "context_relevance": 0.5,
+            "faithfulness": 1.0,
+            "hallucination_rate": 0.0
+          },
+          "cost": 0.0054656,
+          "elapsed_seconds": 32.45889639854431,
+          "model_calls": 3,
+          "model_identities": [
+            {
+              "backend": "openai-compatible",
+              "model": "qwen/qwen3.8-27b",
+              "revision": ""
+            }
+          ],
+          "reported_tokens": {
+            "prompt_tokens": 4102,
+            "completion_tokens": 546
+          },
+          "prompt_hashes": [
+            "1589fd58b5faf1bb877a170fe7c985c5ac6f4b2eb23c61fc53d99d3ca6ebc066",
+            "789019e66c78f419691c72960088320c0fea5f902533d983dd901e1866fed7c3"
+          ]
+        }
+      ],
+      "metrics": {
+        "groundedness": 1.0,
+        "context_relevance": 0.5,
+        "faithfulness": 1.0,
+        "hallucination_rate": 0.0
+      },
+      "pass_rate": 1.0,
+      "p50_seconds": 32.45889639854431,
+      "p95_seconds": 32.45889639854431,
+      "cost_per_100_runs": 0.54656,
+      "cost_by_agent": {
+        "investigator": 0.0039696,
+        "verifier": 0.001496
+      },
+      "total_model_calls": 3
+    }
+  },
+  "configuration": {
+    "mode": "production",
+    "corpus": {
+      "collection": "corpus-9e0a7224acca2e933a19d510",
+      "fingerprint": "9e0a7224acca2e933a19d5107af0bb99f1277eccefacbd3ea0295354dc5cdb15",
+      "version": "kerc-lt-reviewed-2026-11-06-v2",
+      "status": "approved",
+      "state": "Karnataka",
+      "built_at": 1794055864.9924,
+      "chunks": 18,
+      "ingestion_seconds": 2.6394517540011293,
+      "chunks_per_second": 6.81959803687031,
+      "documents": [
+        {
+          "id": "KERC-TARIFF-2025",
+          "title": "KERC Combined Tariff Order 2025 / Annexure 9 / FY2026-27",
+          "path": "corpus/official/sources/tariff.pdf",
+          "source_url": "https://kerc.karnataka.gov.in/uploads/96731743148968.pdf",
+          "kind": "tariff",
+          "version": "source-reviewed-2026-11-06",
+          "effective_from": "2026-04-01",
+          "effective_to": "2026-11-06",
+          "coverage_note": "End date is the corpus review cutoff, not statutory expiry.",
+          "sha256": "d84997a4f7195b5c4ebb94064bd15428d2e8657c4f53e1671a074200595fcf50",
+          "annotations_path": "corpus/official/annotations/tariff.json"
+        },
+        {
+          "id": "KERC-COS-CURRENT-CLAUSES",
+          "title": "KERC Conditions of Supply / selected current clauses, reconciled against amendments",
+          "path": "corpus/official/sources/conditions.pdf",
+          "source_url": "https://kerc.karnataka.gov.in/storage/pdf-files/Regulations/ConditionsofSupplyofElectricitywithIandIIAmendments.pdf",
+          "kind": "supply",
+          "version": "source-reviewed-2026-11-06",
+          "effective_from": "2010-07-22",
+          "effective_to": "2026-11-06",
+          "coverage_note": "End date is the corpus review cutoff, not statutory expiry.",
+          "sha256": "a625669b200385d7f43d11e4b0718920b95d09957a608a2a3bc5d9fe0671a4b0",
+          "annotations_path": "corpus/official/annotations/conditions.json"
+        },
+        {
+          "id": "KERC-CONSUMER-RIGHTS-2022",
+          "title": "KERC Rights of Consumers, Standards of Performance and allied matters Regulations 2022",
+          "path": "corpus/official/sources/consumer-rights.pdf",
+          "source_url": "https://kerc.karnataka.gov.in/uploads/media_to_upload1720004194.pdf",
+          "kind": "supply",
+          "version": "source-reviewed-2026-11-06",
+          "effective_from": "2022-10-14",
+          "effective_to": "2026-11-06",
+          "coverage_note": "End date is the corpus review cutoff, not statutory expiry.",
+          "sha256": "d3b6ec171c1ee54dea89b25b8c91dc8a92bdc582cc385535394a652d2ffa71e1",
+          "annotations_path": "corpus/official/annotations/rights.json"
+        }
+      ],
+      "embedding_backend": "ollama"
+    },
+    "prompt_version": "v6",
+    "max_run_seconds": 600,
+    "slo_p95_seconds": 60,
+    "advisory_only": true,
+    "authentication_required": false,
+    "pricing_label": "Groq-published-standard-rate-estimate-2026-11-07-not-an-invoice"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "configured_per_minute": 12,
+  "accepted_in_this_probe": 12,
+  "rejected_status": 429,
+  "retry_after": "60",
+  "note": "Earlier requests in the same minute can reduce the accepted count."
+}

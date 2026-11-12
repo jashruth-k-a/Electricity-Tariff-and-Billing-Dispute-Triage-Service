@@ -1,0 +1,27 @@
+{
+  "state": "Karnataka",
+  "status": "synthetic-demo",
+  "version": "demo-2026-11-06-v1",
+  "documents": [
+    {
+      "id": "DEMO-TARIFF",
+      "title": "Synthetic teaching tariff - NOT a KERC order",
+      "path": "corpus/demo/tariff.json",
+      "source_url": "",
+      "version": "demo-v1",
+      "effective_from": "2020-01-01",
+      "effective_to": "2030-12-31",
+      "kind": "tariff"
+    },
+    {
+      "id": "DEMO-SUPPLY",
+      "title": "Synthetic teaching supply conditions - NOT regulation",
+      "path": "corpus/demo/supply.json",
+      "source_url": "",
+      "version": "demo-v1",
+      "effective_from": "2020-01-01",
+      "effective_to": "2030-12-31",
+      "kind": "supply"
+    }
+  ]
+}

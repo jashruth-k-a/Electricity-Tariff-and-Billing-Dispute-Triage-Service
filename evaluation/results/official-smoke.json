@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-07",
+  "checks": [
+    {
+      "check": "official-tailoring",
+      "passed": true,
+      "run_id": "dd3238b9-9bf2-4773-8aea-ecbd0b158549",
+      "elapsed_seconds": 20.836044311523438
+    },
+    {
+      "check": "public-audit",
+      "passed": true
+    },
+    {
+      "check": "idempotency-and-conflict",
+      "passed": true
+    },
+    {
+      "check": "verified-result-cache",
+      "passed": true
+    },
+    {
+      "check": "invalid-range",
+      "passed": true
+    },
+    {
+      "check": "invalid-cross-field",
+      "passed": true
+    },
+    {
+      "check": "injection-quarantine",
+      "passed": true
+    },
+    {
+      "check": "out-of-scope-referral",
+      "passed": true
+    },
+    {
+      "check": "officer-feedback",
+      "passed": true
+    }
+  ]
+}

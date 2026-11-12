@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-07",
+  "mode": "official-real-provider",
+  "model": "gemini-3.1-flash-lite",
+  "runtime_response_format": "JSON object with local validation and canonical citations",
+  "unit_tests": {
+    "passed": 51,
+    "failed": 0
+  },
+  "official_public_smoke_checks": 9,
+  "official_reference_cases": 24,
+  "baseline_matches": 6,
+  "final_matches": 15,
+  "strict_reference_misses": [
+    "residential-misclassified",
+    "tailoring-independent-shop",
+    "beauty-parlour-independent",
+    "private-clinic-independent",
+    "paying-guests-shared-home",
+    "bakery-manufacturing",
+    "meter-accuracy",
+    "arrears-documentary-dispute",
+    "disconnection-documentary-dispute"
+  ],
+  "unverified_referrals_among_misses": 8,
+  "alternate_verified_meter_clause_misses": 1,
+  "corpus": {
+    "documents": 3,
+    "annotations": 14,
+    "chunks": 18,
+    "version": "kerc-lt-reviewed-2026-11-06-v2",
+    "review": "bounded technical review; faculty approval not claimed"
+  },
+  "api_readiness_status": 200,
+  "grafana_health_status": 200,
+  "grafana_login_status": 200,
+  "prometheus_targets_up": [
+    "api",
+    "containers",
+    "grafana",
+    "jaeger",
+    "llm-stub",
+    "prometheus",
+    "redis",
+    "verifier",
+    "workers"
+  ],
+  "jaeger_services": [
+    "api",
+    "investigator-worker",
+    "verifier"
+  ],
+  "fresh_demo_startup": {
+    "smoke_checks": 9,
+    "then_current_tests_passed": 46
+  },
+  "updated_resilience_drill": "passed unsupported-answer re-search, outage breaker, fast fallback and recovery",
+  "browser_visual_qa": "not verified: browser automation timed out",
+  "git_commit_or_push_performed": false,
+  "human_steps_not_performed": [
+    "faculty reference confirmation",
+    "team GitHub publication",
+    "live demonstration and viva"
+  ]
+}
