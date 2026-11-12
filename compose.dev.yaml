@@ -1,0 +1,14 @@
+# Optional development overlay. The default compose.yaml runs entirely from built images.
+services:
+  api:
+    volumes: [./triage:/app/triage:ro, ./web:/app/web:ro, ./prompts:/app/prompts:ro, ./scripts:/app/scripts:ro, ./tests:/app/tests:ro, ./pyproject.toml:/app/pyproject.toml:ro, ./loadtests:/app/loadtests:ro]
+  agent-worker:
+    volumes: [./triage:/app/triage:ro, ./prompts:/app/prompts:ro, ./scripts:/app/scripts:ro]
+  verifier:
+    volumes: [./triage:/app/triage:ro, ./prompts:/app/prompts:ro]
+  llm-stub:
+    volumes: [./triage:/app/triage:ro]
+  corpus-init:
+    volumes: [./triage:/app/triage:ro, ./corpus:/app/corpus:ro]
+  tools:
+    volumes: [./triage:/app/triage:ro, ./evaluation:/app/evaluation:ro]

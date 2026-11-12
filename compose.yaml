@@ -1,0 +1,170 @@
+name: electricity-triage
+x-app: &app
+  image: electricity-triage:local
+  build:
+    context: .
+    args:
+      INSTALL_SEMANTIC: ${INSTALL_SEMANTIC:-false}
+  env_file: .env
+  init: true
+  restart: unless-stopped
+  networks: [triage]
+  volumes:
+    - ./data:/app/data
+    - ./output:/app/output
+  logging:
+    driver: json-file
+    options: {max-size: 10m, max-file: "3"}
+
+services:
+  redis:
+    image: redis:7.4-alpine
+    command: [redis-server, --appendonly, "yes", --maxmemory-policy, noeviction]
+    volumes: [redis-data:/data]
+    networks: [triage]
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  chroma:
+    image: chromadb/chroma:1.5.9
+    volumes: [chroma-data:/data]
+    networks: [triage]
+    restart: unless-stopped
+    environment:
+      ANONYMIZED_TELEMETRY: "False"
+    healthcheck:
+      test: [CMD-SHELL, "bash -c 'echo > /dev/tcp/127.0.0.1/8000'"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+  corpus-init:
+    <<: *app
+    restart: "no"
+    command: [python, -m, triage.cli, ingest]
+    environment: {SERVICE_NAME: corpus-init}
+    depends_on:
+      redis: {condition: service_healthy}
+      chroma: {condition: service_healthy}
+  llm-stub:
+    <<: *app
+    command: [uvicorn, triage.stub:app, --host, 0.0.0.0, --port, "8000"]
+    environment: {SERVICE_NAME: llm-stub}
+    depends_on:
+      redis: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=2)"]
+      interval: 10s
+      timeout: 4s
+      retries: 15
+  verifier:
+    <<: *app
+    command: [uvicorn, triage.verifier:app, --host, 0.0.0.0, --port, "8000"]
+    environment: {SERVICE_NAME: verifier}
+    depends_on:
+      corpus-init: {condition: service_completed_successfully}
+      llm-stub: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=2)"]
+      interval: 10s
+      timeout: 4s
+      retries: 15
+  agent-worker:
+    <<: *app
+    command: [python, scripts/start_worker.py]
+    environment:
+      SERVICE_NAME: investigator-worker
+      PROMETHEUS_MULTIPROC_DIR: /tmp/triage-metrics
+    depends_on:
+      verifier: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:9101/metrics', timeout=2)"]
+      interval: 10s
+      timeout: 4s
+      retries: 15
+  api:
+    <<: *app
+    ports: ["127.0.0.1:${API_PORT:-8000}:8000"]
+    environment: {SERVICE_NAME: api}
+    depends_on:
+      agent-worker: {condition: service_healthy}
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/health/ready', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+  redis-exporter:
+    image: oliver006/redis_exporter:v1.77.0
+    environment: {REDIS_ADDR: "redis:6379"}
+    networks: [triage]
+    depends_on:
+      redis: {condition: service_healthy}
+    restart: unless-stopped
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.52.1
+    privileged: true
+    devices: [/dev/kmsg:/dev/kmsg]
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker:/var/lib/docker:ro
+    networks: [triage]
+    restart: unless-stopped
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    ports: ["127.0.0.1:${PROMETHEUS_PORT:-9090}:9090"]
+    networks: [triage]
+    restart: unless-stopped
+  grafana:
+    image: grafana/grafana:12.1.0
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_ADMIN_USER:?Copy .env.example to .env first}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_ADMIN_PASSWORD:?Set Grafana password}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_METRICS_ENABLED: "true"
+    volumes:
+      - ./monitoring/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./monitoring/grafana/dashboards:/var/lib/grafana/dashboards:ro
+      - grafana-data:/var/lib/grafana
+    ports: ["127.0.0.1:${GRAFANA_PORT:-3000}:3000"]
+    networks: [triage]
+    restart: unless-stopped
+  jaeger:
+    image: jaegertracing/all-in-one:1.69.0
+    environment: {COLLECTOR_OTLP_ENABLED: "true"}
+    ports: ["127.0.0.1:${JAEGER_PORT:-16686}:16686"]
+    networks: [triage]
+    restart: unless-stopped
+  tools:
+    <<: *app
+    profiles: [tools]
+    restart: "no"
+    entrypoint: [python, scripts/container_entrypoint.py, python, -m, triage.cli]
+    command: [--help]
+    depends_on:
+      api: {condition: service_healthy}
+  loadtest:
+    <<: *app
+    profiles: [tools]
+    restart: "no"
+    command: [python, scripts/load_test.py]
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+      - ./loadtests:/app/loadtests:ro
+    depends_on:
+      api: {condition: service_healthy}
+
+networks:
+  triage:
+volumes:
+  redis-data:
+  chroma-data:
+  prometheus-data:
+  grafana-data:

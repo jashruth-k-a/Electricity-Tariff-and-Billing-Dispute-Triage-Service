@@ -1,0 +1,46 @@
+# Real local model and semantic embeddings. Use --env-file .env.official with this overlay.
+x-official-env: &official-env
+  env_file: [.env.official]
+
+services:
+  ollama:
+    image: ${OLLAMA_IMAGE:?Set OLLAMA_IMAGE in .env.official}
+    networks: [triage]
+    volumes: [ollama-models:/root/.ollama]
+    environment:
+      OLLAMA_NUM_PARALLEL: "1"
+      OLLAMA_MAX_LOADED_MODELS: "2"
+      OLLAMA_CONTEXT_LENGTH: "8192"
+      OLLAMA_KEEP_ALIVE: "10m"
+    restart: unless-stopped
+    healthcheck:
+      test: [CMD, ollama, list]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+  model-init:
+    image: electricity-triage:local
+    <<: *official-env
+    entrypoint: [python, scripts/container_entrypoint.py, python, scripts/bootstrap_models.py]
+    networks: [triage]
+    volumes: [./data:/app/data, ./output:/app/output]
+    depends_on:
+      ollama: {condition: service_healthy}
+    restart: "no"
+  corpus-init:
+    <<: *official-env
+    depends_on:
+      model-init: {condition: service_completed_successfully}
+  api:
+    <<: *official-env
+  agent-worker:
+    <<: *official-env
+  verifier:
+    <<: *official-env
+  tools:
+    <<: *official-env
+  loadtest:
+    <<: *official-env
+
+volumes:
+  ollama-models:

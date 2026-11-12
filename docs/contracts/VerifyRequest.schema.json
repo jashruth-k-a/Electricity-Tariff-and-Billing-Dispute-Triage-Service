@@ -1,0 +1,51 @@
+{
+  "properties": {
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "request": {
+      "additionalProperties": true,
+      "title": "Request",
+      "type": "object"
+    },
+    "candidate": {
+      "additionalProperties": true,
+      "title": "Candidate",
+      "type": "object"
+    },
+    "passages": {
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Passages",
+      "type": "array"
+    },
+    "prompt_version": {
+      "title": "Prompt Version",
+      "type": "string"
+    },
+    "deadline": {
+      "title": "Deadline",
+      "type": "number"
+    },
+    "steps_remaining": {
+      "maximum": 20,
+      "minimum": 1,
+      "title": "Steps Remaining",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "run_id",
+    "request",
+    "candidate",
+    "passages",
+    "prompt_version",
+    "deadline",
+    "steps_remaining"
+  ],
+  "title": "VerifyRequest",
+  "type": "object"
+}

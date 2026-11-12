@@ -1,0 +1,135 @@
+{
+  "$defs": {
+    "Citation": {
+      "properties": {
+        "chunk_id": {
+          "title": "Chunk Id",
+          "type": "string"
+        },
+        "quote": {
+          "minLength": 10,
+          "title": "Quote",
+          "type": "string"
+        },
+        "document": {
+          "title": "Document",
+          "type": "string"
+        },
+        "clause": {
+          "title": "Clause",
+          "type": "string"
+        },
+        "page": {
+          "title": "Page",
+          "type": "integer"
+        },
+        "source_url": {
+          "title": "Source Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "chunk_id",
+        "quote",
+        "document",
+        "clause",
+        "page",
+        "source_url"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "Claim": {
+      "properties": {
+        "statement": {
+          "maxLength": 2000,
+          "minLength": 5,
+          "title": "Statement",
+          "type": "string"
+        },
+        "chunk_ids": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "title": "Chunk Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "statement",
+        "chunk_ids"
+      ],
+      "title": "Claim",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "route": {
+      "enum": [
+        "bill-stands-with-reason",
+        "revision-recommended",
+        "site-inspection-required"
+      ],
+      "title": "Route",
+      "type": "string"
+    },
+    "tariff_position": {
+      "maxLength": 4000,
+      "minLength": 10,
+      "title": "Tariff Position",
+      "type": "string"
+    },
+    "claims": {
+      "items": {
+        "$ref": "#/$defs/Claim"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Claims",
+      "type": "array"
+    },
+    "citations": {
+      "items": {
+        "$ref": "#/$defs/Citation"
+      },
+      "maxItems": 12,
+      "minItems": 1,
+      "title": "Citations",
+      "type": "array"
+    },
+    "escalation_required": {
+      "title": "Escalation Required",
+      "type": "boolean"
+    },
+    "escalation_reason": {
+      "maxLength": 2000,
+      "title": "Escalation Reason",
+      "type": "string"
+    },
+    "issue_type": {
+      "enum": [
+        "tariff-category",
+        "meter-accuracy",
+        "load-violation",
+        "arrears",
+        "disconnection"
+      ],
+      "title": "Issue Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "route",
+    "tariff_position",
+    "claims",
+    "citations",
+    "escalation_required",
+    "escalation_reason",
+    "issue_type"
+  ],
+  "title": "Recommendation",
+  "type": "object"
+}

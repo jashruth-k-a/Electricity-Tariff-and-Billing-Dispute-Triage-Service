@@ -1,0 +1,26 @@
+{
+  "properties": {
+    "supported": {
+      "title": "Supported",
+      "type": "boolean"
+    },
+    "reasons": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Reasons",
+      "type": "array"
+    },
+    "retry_query": {
+      "default": "",
+      "title": "Retry Query",
+      "type": "string"
+    }
+  },
+  "required": [
+    "supported",
+    "reasons"
+  ],
+  "title": "Verification",
+  "type": "object"
+}

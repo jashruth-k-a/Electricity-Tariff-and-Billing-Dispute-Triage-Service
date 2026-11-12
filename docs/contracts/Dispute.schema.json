@@ -1,0 +1,137 @@
+{
+  "$defs": {
+    "Category": {
+      "enum": [
+        "domestic",
+        "commercial",
+        "industrial",
+        "agricultural",
+        "unknown"
+      ],
+      "title": "Category",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "state": {
+      "default": "Karnataka",
+      "maxLength": 60,
+      "minLength": 2,
+      "title": "State",
+      "type": "string"
+    },
+    "connection_type": {
+      "default": "LT",
+      "enum": [
+        "LT",
+        "HT",
+        "EHT"
+      ],
+      "title": "Connection Type",
+      "type": "string"
+    },
+    "billed_category": {
+      "$ref": "#/$defs/Category"
+    },
+    "premises_use": {
+      "enum": [
+        "residential",
+        "commercial",
+        "industrial",
+        "agricultural",
+        "mixed",
+        "unknown"
+      ],
+      "title": "Premises Use",
+      "type": "string"
+    },
+    "description": {
+      "maxLength": 4000,
+      "minLength": 15,
+      "title": "Description",
+      "type": "string"
+    },
+    "connected_load_kw": {
+      "exclusiveMinimum": 0,
+      "maximum": 10000,
+      "title": "Connected Load Kw",
+      "type": "number"
+    },
+    "sanctioned_load_kw": {
+      "exclusiveMinimum": 0,
+      "maximum": 10000,
+      "title": "Sanctioned Load Kw",
+      "type": "number"
+    },
+    "billing_date": {
+      "format": "date",
+      "title": "Billing Date",
+      "type": "string"
+    },
+    "business_activity": {
+      "anyOf": [
+        {
+          "maxLength": 200,
+          "minLength": 2,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Business Activity"
+    },
+    "business_area_sqm": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "maximum": 100000,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Business Area Sqm"
+    },
+    "total_area_sqm": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "maximum": 100000,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Total Area Sqm"
+    },
+    "separate_meter": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Separate Meter"
+    }
+  },
+  "required": [
+    "billed_category",
+    "premises_use",
+    "description",
+    "connected_load_kw",
+    "sanctioned_load_kw",
+    "billing_date"
+  ],
+  "title": "Dispute",
+  "type": "object"
+}

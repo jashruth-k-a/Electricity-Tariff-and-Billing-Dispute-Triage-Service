@@ -1,0 +1,13 @@
+# Controlled performance experiment: local delayed stub, high public limit, explicit cache setting.
+# Never use this overlay to expose a production service.
+services:
+  api:
+    environment:
+      RATE_LIMIT_PER_MINUTE: "100000"
+      CACHE_ENABLED: ${LOAD_CACHE_ENABLED:-false}
+  agent-worker:
+    environment:
+      CACHE_ENABLED: ${LOAD_CACHE_ENABLED:-false}
+  loadtest:
+    environment:
+      CACHE_ENABLED: ${LOAD_CACHE_ENABLED:-false}
