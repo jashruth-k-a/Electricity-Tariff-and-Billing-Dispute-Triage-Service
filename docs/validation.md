@@ -116,10 +116,12 @@ results enter the cache; a cache hit avoids repeated agent/model calls and retai
 audit. Report p95 and call avoidance, but do not claim a positive monetary saving from the
 zero-priced stub. Public rate limiting is restored after controlled tests.
 
-## Remaining evidence gates
+## Remaining confirmation
 
-The official 2025 tariff PDF and historical supply compilation were downloaded and hashed.
-Current supply amendments and faculty reference confirmation are still pending. Production
-mode is fail-closed until an approved corpus, local semantic embeddings, provider/client
-credentials and explicit prices are supplied. No paid/free-tier real model was called, no
-official-reference accuracy is claimed, and no Git commit/push was made.
+The corpus includes a technical review of selected supply amendments through 2026-11-06.
+Faculty confirmation of the corpus and the tailoring reference case is still pending.
+Recheck later amendments before extending the reviewed scope.
+
+The hosted Gemini run matched 15 of 24 strict references and passed the required tailoring
+case. The nine misses remain documented in [the evaluation report](official-evaluation.md).
+These results apply to the fixed evaluation set.

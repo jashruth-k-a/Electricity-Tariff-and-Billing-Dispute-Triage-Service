@@ -16,6 +16,12 @@ Synthetic results are separate infrastructure evidence and do not establish regu
 See [official corpus and startup](docs/official-corpus.md), including the LT-1 tailoring exception
 and the technical review boundary.
 
+## Project contributors
+
+- Hamsa M N (PES2UG24AM060)
+- Harshitha V (PES2UG24AM064)
+- Jashruth K A (PES2UG24AM069)
+
 ## Start from a clean clone
 
 Requirements: Docker Desktop with Linux containers, Compose v2, internet for first image
